@@ -87,7 +87,7 @@ int main(void)
 	char* y=(char*) calloc(MAX_DIG_NB+1, sizeof(char));
 	char* result=(char*) calloc(MAX_DIG_NB+1, sizeof(char));
 
-	/*	Reading Input x and y */
+	/* Reading Input x and y */
 
 	printf("Please enter two digits for multiplication: ");
 	scanf("%s %s",x,y);
