@@ -15,7 +15,7 @@
 unsigned long long int Pow_10[9]={10,100,1000,10000,100000,1000000,10000000,100000000,1000000000};
 
 /* 
- * This recursive function is computing the multiplication of 2 numbers x and y
+ * This recursive function is computing the multiplication of two numbers x and y
  * using karatsuba approach and showing the process of every iteration 
  */
 
@@ -106,4 +106,3 @@ int main(void)
 	free(res);
 	return 0;
 }
-
