@@ -45,7 +45,7 @@ unsigned long long int karatsuba (unsigned long long* x, unsigned long long int*
 	 * 	x=10^(n/2)*a+b
 	 * 	y=10^(n/2)*c+d
 	 */
-
+	
 	unsigned long long int a,b,c,d;
 	unsigned long long int ac,bd,abcd;
 	int maxdiv2=max/2;
@@ -68,13 +68,13 @@ unsigned long long int karatsuba (unsigned long long* x, unsigned long long int*
 	{
 		printf("\n%llu*10^%d + %llu*10^%d + %llu\n",ac,max,abcd,maxdiv2,bd);
 
-		unsigned long long int ress=(unsigned long long int)ac*Pow_10[max-1]+abcd*Pow_10[maxdiv2-1]+bd;
+		unsigned long long int ress=ac*Pow_10[max-1]+abcd*Pow_10[maxdiv2-1]+bd;
 
 		return ress;
 	}
 	else
 	{
-		printf("     \n%llu*10^%d + %llu*10^%d + %llu\n",ac,max,abcd,max/2,bd);
+		printf("\n%llu*10^%d + %llu*10^%d + %llu\n",ac,max,abcd,max/2,bd);
 
 		/* 
 		 * 
