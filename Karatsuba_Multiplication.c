@@ -5,6 +5,7 @@
  * Version     : 1.0
  * Copyright   : Copyright 2017. You can use this code however and wherever you want no strings attached
  * Description : C Function to Perform Karatsuba mutliplication of numbers with at most 18 digits (for architecture 64-bit)
+ *     		 O(n^log2(3))
  * ============================================================================
  */
 
