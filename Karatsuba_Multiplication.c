@@ -16,7 +16,7 @@ unsigned long long int Pow_10[9]={10,100,1000,10000,100000,1000000,10000000,1000
 
 /* 
  * This recursive function is computing the multiplication of 2 numbers x and y
- * 	using karatsuba approach and showing the process of every iteration 
+ * using karatsuba approach and showing the process of every iteration 
  */
 
 unsigned long long int karatsuba (unsigned long long* x, unsigned long long int* y, char* res, int check)
@@ -79,8 +79,8 @@ unsigned long long int karatsuba (unsigned long long* x, unsigned long long int*
 		/* 
 		 * 
 		 * 
-		 * 				Still implementation of calculating the result and put it in the array res 
-		 * 
+		 * 	Still missing the last part of implementation for calculating the result and put it in 
+		 * 	the array res 
 		 * 
 		 * 
 		 */
@@ -94,7 +94,7 @@ int main(void)
 	unsigned long long int x,y;
 	scanf("%llu %llu",&x,&y);
 
-	/*	read input x and y */
+	/* read input x and y */
 
 	int sizex=log10(x)+1;
 	int sizey=log10(y)+1;
