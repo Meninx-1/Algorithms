@@ -85,7 +85,7 @@ unsigned long long int karatsuba (unsigned long long* x, unsigned long long int*
 		 * 
 		 */
 
-		return 0;
+		return -1;
 	}
 }
 
