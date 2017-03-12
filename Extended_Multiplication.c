@@ -4,7 +4,7 @@
  * Author      : Meninx
  * Version     : 1.0
  * Copyright   : Copyright 2017. You can use this code however and wherever you want no strings attached
- * Description : C Function to Perform High Precision Multiplication for Numbers with at most MAX_DIG_NB Digits
+ * Description : C Function to Perform High Precision Multiplication for Numbers with at most MAX_DIG_NB Digits O(n^2)
  * ============================================================================
  */
 
