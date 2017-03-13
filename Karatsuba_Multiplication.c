@@ -35,7 +35,7 @@ void print_result(char* res, int sizer)
 	printf("\n");
 }
 
-/* compute how many digits is composed the number nb */
+/* compute how many digits are in number nb */
 
 int Nb_Digits(unsigned long long int nb)
 {
@@ -71,7 +71,7 @@ void Compute_and_Fill_Array(unsigned long long int ac, unsigned long long int ab
 
 	int countabcd=strlen(strabcd);
 
-	/* Calculation & Fill */
+	/* Computing and filling array res */
 
 	for(int j=sizer;j>0;--j)
 	{
