@@ -89,8 +89,8 @@ void Compute_and_Fill_Array(unsigned long long int ac, unsigned long long int ab
 	}
 	
 	free(strac);
-	free(abcd);
-	free(bd);
+	free(strabcd);
+	free(strbd);
 }
 
 /* 
