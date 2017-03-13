@@ -93,7 +93,6 @@ void Compute_and_Fill_Array(unsigned long long int ac, unsigned long long int ab
 	free(bd);
 }
 
-
 /* 
  * This recursive function is computing the multiplication of two numbers x and y
  * using karatsuba algorithm 
