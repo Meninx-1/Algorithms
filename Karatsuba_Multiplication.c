@@ -16,14 +16,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* When SHOW_PROCESS is set to 1 it will visualize values in each process */
+/* When SHOW_PROCESS is set to 1 it will visualize Karatsuba algorithm in depth */
 
 #define SHOW_PROCESS 1
 
 /* 
  * 10^(BASE+1) 
  * For better performance better setting BASE to 9 (This is the Maximum Value for BASE)
- * For better visualising the Process keep BASE to 0
+ * For better visualisation of Karatsuba Algorithm keep BASE to 0
  */
 
 #define BASE 0
