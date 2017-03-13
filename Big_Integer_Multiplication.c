@@ -5,6 +5,7 @@
  * Version     : 1.0
  * Copyright   : Copyright 2017. You can use this code however and wherever you want no strings attached
  * Description : C Function to Perform High Precision Multiplication for Numbers with at most MAX_DIG_NB Digits O(n^2)
+ *               The multiplication is restricted only for positive numbers.            
  * ============================================================================
  */
 
@@ -12,7 +13,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* Maximum Nb of Digits for Numbers to multiply */
+/* MAX_DIG_NB is the maximum Nb of Digits for each number x and y */
 
 #define MAX_DIG_NB 10000
 #define MAX_DIG_RESULT MAX_DIG_NB*2
