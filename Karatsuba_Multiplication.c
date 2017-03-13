@@ -4,9 +4,9 @@
  * Author      : Meninx
  * Version     : 1.0
  * Copyright   : Copyright 2017. You can use this code however and wherever you want no strings attached
- * Description : C Function to Perform High Precision Karatsuba mutliplication of numbers at most 16 digits [ O(n^log2(3)) ]
- *               It can also compute numbers with at most 18 digits in condition that the other
- *               number should be at most 8 digits
+ * Description : C Function to Perform High Precision Karatsuba mutliplication [O(n^log2(3))] of numbers with at most 16 digits. 
+ *               It can also compute numbers with at most 18 digits in condition that the other number
+ *               should be at most 8 digits.
  *               The multiplication is restricted only for positive numbers.
  * ============================================================================
  */
