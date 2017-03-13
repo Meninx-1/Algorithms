@@ -1,6 +1,6 @@
 /* 
  * ============================================================================
- * Name        : Extended_Multiplication.c
+ * Name        : Big_Integer_Multiplication.c
  * Author      : Meninx
  * Version     : 1.0
  * Copyright   : Copyright 2017. You can use this code however and wherever you want no strings attached
