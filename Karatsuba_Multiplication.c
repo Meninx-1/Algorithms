@@ -4,7 +4,8 @@
  * Author      : Meninx
  * Version     : 1.0
  * Copyright   : Copyright 2017. You can use this code however and wherever you want no strings attached
- * Description : C Function to Perform High Precision Karatsuba mutliplication [O(n^log2(3))] of numbers with at most 16 digits. 
+ * Description : C Function to Perform High Precision Karatsuba mutliplication [O(n^log2(3))] of numbers 
+ *               with at most 16 digits. 
  *               It can also compute numbers with 17 and 18 digits in condition that the other number
  *               should be at most 8 digits.
  *               The multiplication is restricted only for positive numbers.
@@ -63,7 +64,8 @@ int Nb_Digits(unsigned long long int nb)
  *  and fill the variable res with result
  */
 
-void Compute_and_Fill_Array(unsigned long long int ac, unsigned long long int abcd, unsigned long long int bd,int max, char*res,int sizer) 
+void Compute_and_Fill_Array(unsigned long long int ac, unsigned long long int abcd, unsigned long long int bd,int max,
+			    char*res,int sizer) 
 {
 	int maxdiv2=max/2;
 
