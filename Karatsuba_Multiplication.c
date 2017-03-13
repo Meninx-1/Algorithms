@@ -1,6 +1,6 @@
 /* 
  * ============================================================================
- * Name        : Karatsuba_multiplication.c
+ * Name        : Karatsuba_Multiplication.c
  * Author      : Meninx
  * Version     : 1.0
  * Copyright   : Copyright 2017. You can use this code however and wherever you want no strings attached
@@ -16,12 +16,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*When SHOW_PROCESS is set to 1 it will visualize values in each process */
+/* When SHOW_PROCESS is set to 1 it will visualize values in each process */
 #define SHOW_PROCESS 1
 
 unsigned long long int Pow_10[9]={10,100,1000,10000,100000,1000000,10000000,100000000,1000000000};
 
-/*	print the result in variable res */
+/* print the result in variable res */
 
 void print_result(char* res, int sizer)
 {
@@ -92,8 +92,9 @@ void Compute_and_Fill_Array(unsigned long long int ac, unsigned long long int ab
 
 /* 
  * This recursive function is computing the multiplication of two numbers x and y
- * 	using karatsuba approach and showing the process of every iteration 
+ * using karatsuba algorithm 
  */
+
 unsigned long long int karatsuba (unsigned long long* x, unsigned long long int* y, char* res, int check)
 {
 
