@@ -87,6 +87,10 @@ void Compute_and_Fill_Array(unsigned long long int ac, unsigned long long int ab
 		res[j-1]+=res[j]/10;
 		res[j]=res[j]%10;
 	}
+	
+	free(strac);
+	free(abcd);
+	free(bd);
 }
 
 
@@ -104,7 +108,7 @@ unsigned long long int karatsuba (unsigned long long* x, unsigned long long int*
 	int max=sizex;
 
 	/* 
-	 *  Compute the number "max" for dividing numbers into two halves 
+	 *  Compute "max" to divide numbers into two equal halves 
 	 *
 	 *  For better performance set max to 18 
 	 */
@@ -113,7 +117,6 @@ unsigned long long int karatsuba (unsigned long long* x, unsigned long long int*
 		max=sizey;
 	if(max%2!=0)
 		++max;
-
 
 #if SHOW_PROCESS
 	printf("\n\n(%d) x=%llu y=%llu \n",check,*x,*y);
@@ -164,7 +167,6 @@ unsigned long long int karatsuba (unsigned long long* x, unsigned long long int*
 	printf("ac=%llu\nbd=%llu\nabcd=%llu\n",ac,bd,abcd);
 #endif
 
-
 #if SHOW_PROCESS
 	printf("\n(%d) ==> %llu*10^%d + %llu*10^%d + %llu\n",check,ac,max,abcd,maxdiv2,bd);
 #endif
@@ -212,4 +214,3 @@ int main(void)
 
 	return 0;
 }
-
