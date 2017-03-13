@@ -17,9 +17,18 @@
 #include <string.h>
 
 /* When SHOW_PROCESS is set to 1 it will visualize values in each process */
+
 #define SHOW_PROCESS 1
 
-unsigned long long int Pow_10[9]={10,100,1000,10000,100000,1000000,10000000,100000000,1000000000};
+/* 
+ * 10^(BASE+1) 
+ * For better performance better setting BASE to 9 (This is the Maximum Value for BASE)
+ * For better visualising the Process keep BASE to 0
+ */
+
+#define BASE 0
+
+unsigned long long int Pow_10[18]={10,100,1000,10000,100000,1000000,10000000,100000000,1000000000,10000000000,100000000000,1000000000000,10000000000000,100000000000000,1000000000000000,10000000000000000,100000000000000000,1000000000000000000};
 
 /* print the result from variable res */
 
@@ -87,7 +96,7 @@ void Compute_and_Fill_Array(unsigned long long int ac, unsigned long long int ab
 		res[j-1]+=res[j]/10;
 		res[j]=res[j]%10;
 	}
-	
+
 	free(strac);
 	free(strabcd);
 	free(strbd);
@@ -121,7 +130,7 @@ unsigned long long int karatsuba (unsigned long long* x, unsigned long long int*
 	printf("\n\n(%d) x=%llu y=%llu \n",check,*x,*y);
 #endif
 
-	if(sizex+sizey<=18)
+	if(*x<Pow_10[BASE] && *y<Pow_10[BASE])
 	{
 		unsigned long long int temp= *x * *y;
 
@@ -170,11 +179,27 @@ unsigned long long int karatsuba (unsigned long long* x, unsigned long long int*
 	printf("\n(%d) ==> %llu*10^%d + %llu*10^%d + %llu\n",check,ac,max,abcd,maxdiv2,bd);
 #endif
 
-	int sizer=sizex+sizey-1;
+	if(check!=0)
+	{
 
-	Compute_and_Fill_Array(ac,abcd,bd,max,res,sizer);
+		unsigned long long res2=ac*Pow_10[max-1]+abcd*Pow_10[max/2-1]+bd;
 
-	return -1Lu;
+#if SHOW_PROCESS
+		printf("=%llu \n",res2);
+#endif
+
+		return res2;
+	}
+
+	else
+	{
+
+		int sizer=sizex+sizey-1;
+
+		Compute_and_Fill_Array(ac,abcd,bd,max,res,sizer);
+
+		return -1Lu;
+	}
 }
 
 int main(void)
@@ -190,7 +215,7 @@ int main(void)
 	int sizey=Nb_Digits(y);
 
 #if SHOW_PROCESS
-	printf("Nb_digits(x)= %d Nb_digits(y)=%d \n",sizex,sizey);
+	printf("Nb_digits(x)= %d Nb_digits(y)=%d Base=10^%d\n",sizex,sizey,BASE+1);
 #endif
 
 	if((sizex>=17 && sizey>=9) || (sizey>=17 && sizex>=9) || sizex>18 || sizey>18) 
