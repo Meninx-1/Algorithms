@@ -24,7 +24,7 @@
  * 
  */
 
-void print_array(char* array, int size)
+void print_array(char* result, int size)
 {
 	for(int l=size ;l>0;--l )
 	{
@@ -37,10 +37,11 @@ void print_array(char* array, int size)
  * 
  * High precision multiplication using usual knonwn calculation
  * Numbers x,y can have at most MAX_DIG_NB digits
+ * Function return the index of last digit in resulted array
  * 
  */
 
-void usual_multiplication(char* x, char* y, char* result)
+int usual_multiplication(char* x, char* y, char* result)
 {
 	int sizex=strlen(x);
 	int sizey=strlen(y);
@@ -51,35 +52,35 @@ void usual_multiplication(char* x, char* y, char* result)
 
 	if((sizex==1 && x[0]==48) || (sizey==1 && y[0]==48))
 	{
-		printf("0\n");
-		return;
+		return 0;
 	}
 
 	/* Multiplication loop */
 
+	int index;
 	for(int i=sizex-1;i>-1;--i)
 	{
 		for(int j=sizey-1;j>-1;--j)
 		{
-			result[count+sizey-1-j]+=(y[j]-48)*(x[i]-48);
+			index=count+sizey-j;
+			result[index-1]+=(y[j]-48)*(x[i]-48);
+
+			/* Move carry to the left */
+
+			result[index]+=result[index-1]/10;
+			result[index-1]%=10;
 		}
 		++count;
 	}
 
-	/* Addition after Muliplication */
+	/* Getting the accurate size of result in "count" variable  */
 
 	count=sizer-1;
-	for(int l=0;l<sizer-1;++l)
-	{
-		result[l+1]+=result[l]/10;
-		result[l]%=10;
-		if(result[count]==0)
-			--count;
-	}
+	while(result[count]==0)
+		--count;
 
-	/* Printing result */
+	return count;
 
-	print_array(result,count);
 }
 
 int main(void)
@@ -93,7 +94,13 @@ int main(void)
 	printf("Please enter two digits for multiplication: ");
 	scanf("%s %s",x,y);
 
-	usual_multiplication(x,y,result);
+	int size_result;
+	
+	size_result=usual_multiplication(x,y,result);
+
+	/* Printing result */
+
+	print_array(result,size_result);
 
 	free(x);
 	free(y);
