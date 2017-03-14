@@ -48,7 +48,6 @@ int usual_multiplication(char* x, char* y, char* result)
 {
 	int sizex=strlen(x);
 	int sizey=strlen(y);
-	int sizer=sizex+sizey;
 	int count=0;
 
 	/* This is a the case if one of number is zero */
@@ -78,7 +77,7 @@ int usual_multiplication(char* x, char* y, char* result)
 	
 	/* Index of last digit related to reversed result */
 	
-	count=count+sizey-1;
+	count=count+sizey-2;
 
 	return count;
 }
