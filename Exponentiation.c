@@ -59,7 +59,7 @@ unsigned long long int pow_3(int x,int y)
  * x^y mod m = ( ( x mod m ) ^ y  ) mod m
  */
 
-int mood(int x,int y,int m)
+int mod_1(int x,int y,int m)
 {
 	int mod;
 
@@ -71,13 +71,13 @@ int mood(int x,int y,int m)
 
 	if(y%2!=0)
 	{
-		mod=mood(x,y-1,m)*(x%m);
+		mod=mod_1(x,y-1,m)*(x%m);
 		return mod%m;
 	}
 
 	/* Case if y is even - No need for condition check - */
 
-	mod=mood(x,y/2,m);
+	mod=mod_1(x,y/2,m);
 
 	mod=mod*mod;
 
@@ -101,7 +101,7 @@ int main(void)
 	{
 		printf("Please enter x, y and m: ");
 		scanf("%d %d %d",&x,&y,&m);
-		printf("%d\n",mood(x,y,m));
+		printf("%d\n",mod_1(x,y,m));
 	}
 
 	return 0;
