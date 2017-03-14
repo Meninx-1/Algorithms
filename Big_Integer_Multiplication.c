@@ -75,12 +75,10 @@ int usual_multiplication(char* x, char* y, char* result)
 		}
 		++count;
 	}
-
-	/* Setting the accurate size of result and put it inside "count" variable  */
-
-	count=sizer-1;
-	while(result[count]==0)
-		--count;
+	
+	/* Index of last digit related to reversed result */
+	
+	count=count+sizey-1;
 
 	return count;
 }
