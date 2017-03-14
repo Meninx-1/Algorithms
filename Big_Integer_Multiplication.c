@@ -13,7 +13,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* MAX_DIG_NB is the maximum Nb of Digits for each number x and y */
+/*
+* MAX_DIG_NB is the maximum Nb of Digits for each number x and y 
+* MAX_DIG_NB <= INT_MAX 
+*/
 
 #define MAX_DIG_NB 10000
 #define MAX_DIG_RESULT MAX_DIG_NB*2
@@ -37,7 +40,7 @@ void print_array(char* result, int size)
  * 
  * High precision multiplication using usual knonwn calculation
  * Numbers x,y can have at most MAX_DIG_NB digits
- * Function return the index of last digit in resulted array
+ * Function return the index of last digit in reversed result (index of high-order digit in array)
  * 
  */
 
@@ -65,7 +68,7 @@ int usual_multiplication(char* x, char* y, char* result)
 			index=count+sizey-j;
 			result[index-1]+=(y[j]-48)*(x[i]-48);
 
-			/* Move carry to the left */
+			/* Move carry to the left - result is in reverse - */
 
 			result[index]+=result[index-1]/10;
 			result[index-1]%=10;
@@ -73,14 +76,13 @@ int usual_multiplication(char* x, char* y, char* result)
 		++count;
 	}
 
-	/* Getting the accurate size of result in "count" variable  */
+	/* Getting the accurate size of result inside "count" variable  */
 
 	count=sizer-1;
 	while(result[count]==0)
 		--count;
 
 	return count;
-
 }
 
 int main(void)
