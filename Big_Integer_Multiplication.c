@@ -65,13 +65,13 @@ int usual_multiplication(char* x, char* y, char* result)
 	{
 		for(int j=sizey-1;j>-1;--j)
 		{
-			index=count+sizey-j;
-			result[index-1]+=(y[j]-48)*(x[i]-48);
+			index=count+sizey-j-1;
+			result[index]+=(y[j]-48)*(x[i]-48);
 
 			/* Move carry to the left - result is in reverse - */
 
-			result[index]+=result[index-1]/10;
-			result[index-1]%=10;
+			result[index+1]+=result[index]/10;
+			result[index]%=10;
 		}
 		++count;
 	}
