@@ -76,7 +76,7 @@ int usual_multiplication(char* x, char* y, char* result)
 		++count;
 	}
 
-	/* Getting the accurate size of result inside "count" variable  */
+	/* Setting the accurate size of result and put it inside "count" variable  */
 
 	count=sizer-1;
 	while(result[count]==0)
