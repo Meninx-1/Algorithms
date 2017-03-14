@@ -8,4 +8,4 @@ This repository contains list of implementations related to some efficient algor
   
   - [**Multiplication of large numbers using Karatsuba Approach**](https://github.com/Meninx-1/Algorithms/blob/master/Karatsuba_Multiplication.c)
   
-    - [**Exponentiation & Modular Exponentiation**](https://github.com/Meninx-1/Algorithms/blob/master/Exponentiation.c)
+  - [**Exponentiation & Modular Exponentiation**](https://github.com/Meninx-1/Algorithms/blob/master/Exponentiation.c)
