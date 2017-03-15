@@ -28,7 +28,7 @@ unsigned long long int pow_1(int x,int y)
 
 }
 
-/* The complexity of this function is O(n) + O(1)  */
+/* The complexity of this function is O(n) */
 
 unsigned long long int pow_2(int x,int y)
 {
@@ -38,7 +38,7 @@ unsigned long long int pow_2(int x,int y)
 	return x*pow_2(x,y-1);
 }
 
-/* The complexity of this function is O(n) + O(log2(n)) */
+/* The complexity of this function is O(n) */
 
 unsigned long long int pow_3(int x,int y)
 {
