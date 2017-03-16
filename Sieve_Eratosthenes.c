@@ -1,6 +1,6 @@
 /* 
  * ============================================================================
- * Name        : Sieve_of_Eratosthenes.c
+ * Name        : Sieve_Eratosthenes.c
  * Author      : Meninx
  * Version     : 1.0
  * Copyright   : Copyright 2017. You can use this code however and wherever you want no strings attached
