@@ -28,7 +28,10 @@ void Print_Array(int N, _Bool* Primes)
 	printf("\n");
 }
 
-/* This function is intended to do the Sieve */
+/* 
+ * This function is intended to do the Sieve 
+ * To be more precise for time complexity it is O(sqrt(n)*n*ln(ln(n))) (Euler's Prime sum Divergence)
+ */
 
 void Sieve_of_Eratosthenes(int N, _Bool* Primes) 
 {
